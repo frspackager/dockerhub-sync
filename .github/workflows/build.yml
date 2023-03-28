@@ -30,11 +30,14 @@ jobs:
           images: frspackager/dockerhub-sync
           tags: |
               type=ref,event=branch
-              type=sha
-              type=sha,prefix={{branch}}-
-              type=sha,format=long
-              type=sha,format=long,prefix={{branch}}-
+              type=ref,event=pr
+              type=semver,pattern={{version}}
+              type=semver,pattern={{major}}.{{minor}}
+              type=semver,pattern={{major}}
               type=raw,value=latest
+              type=sha
+              type=sha,format=long
+
 
       - name: Build and push
         uses: docker/build-push-action@v4
