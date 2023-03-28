@@ -5,6 +5,6 @@ LABEL maintainer="FRS Packager" \
       version="0.1"
 
 RUN apk update && apk upgrade && \
-    apk add easy-rsa jq
+    apk add easy-rsa jq coreutils
 
 CMD [ "/bin/sh" ]
