@@ -1,4 +1,4 @@
-name: Publish DockerHub image
+name: Publish DockerHub image extra arch
 
 on:
   push:
