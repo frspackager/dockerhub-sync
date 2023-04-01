@@ -1,4 +1,5 @@
 name: Publish DockerHub image
+# Default Action to build linux/amd64 target architecture
 
 on:
   push:
